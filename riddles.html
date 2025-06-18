@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Riddle Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .riddle-box {
+      background-color: #fff;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .riddle {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      min-height: 3rem; /* avoid layout shift on new riddle */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">My Website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="scratch.html">Scratch</a></li>
+
+          <li class="nav-item"><a class="nav-link active" href="riddles.html" aria-current="page">Riddles</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Riddle Generator -->
+  <div class="container my-5">
+    <div class="riddle-box mx-auto col-md-8">
+      <h1 class="mb-4">🧩 Random Riddle Generator</h1>
+      <p class="riddle" id="riddle">Click the button to get a riddle!</p>
+      <button class="btn btn-primary" onclick="generateRiddle()">New Riddle</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const riddles = [
+      "What has to be broken before you can use it? — An egg.",
+      "I’m tall when I’m young, and I’m short when I’m old. What am I? — A candle.",
+      "What month of the year has 28 days? — All of them.",
+      "What is full of holes but still holds water? — A sponge.",
+      "What question can you never answer yes to? — Are you asleep yet?",
+      "What gets wet while drying? — A towel.",
+      "What can you keep after giving to someone? — Your word.",
+      "I have branches, but no fruit, trunk or leaves. What am I? — A bank.",
+      "The more of me you take, the more you leave behind. What am I? — Footsteps.",
+      "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? — An echo."
+    ];
+
+    function generateRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      document.getElementById('riddle').innerText = riddles[randomIndex];
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

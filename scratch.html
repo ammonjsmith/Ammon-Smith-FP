@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Motocross passion page by Ammon Smith, including video and Tableau data visualization." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <title>Motocross Passion Page - Ammon Smith</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="scratch-style.css" />
+  <style>
+    body {
+      background-color: #f4f9ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      padding-top: 60px;
+    }
+    .custom-section {
+      padding: 40px 20px;
+    }
+    .section-dark {
+      background-color: #dceeff;
+    }
+    .motocross-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    ul {
+      list-style-type: square;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Ammon Smith</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="scratch.html">Scratch</a></li>
+          <li class="nav-item"><a class="nav-link" href="riddles.html">Riddles</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="custom-section">
+    <div class="container">
+      <h1>Why I Love Motocross</h1>
+      <p>Motocross isn't just a sport to me—it's a passion that challenges my mind and body. The thrill of the track, the smell of the dirt, and the focus needed to control the bike through turns and jumps are unmatched.</p>
+    </div>
+  </section>
+
+  <!-- Nested List Section -->
+  <section class="custom-section section-dark">
+    <div class="container">
+      <h2>Motocross Gear Checklist</h2>
+      <ol>
+        <li>Essential Gear
+          <ul>
+            <li>Helmet</li>
+            <li>Goggles</li>
+            <li>Gloves</li>
+          </ul>
+        </li>
+        <li>Protective Gear
+          <ul>
+            <li>Chest Protector</li>
+            <li>Knee Pads</li>
+            <li>Elbow Pads</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Image Section -->
+  <section class="custom-section">
+    <div class="container">
+      <h2>In Action</h2>
+      <img src="https://s.yimg.com/fz/api/res/1.2/2pLpwIeCsCBnyqJBoTpA5g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODQ7cT04MDt3PTUxMg--/https://www.bing.com/th?id=OVFT.AM_YAQgAVuBu5DgzFCMcLy&pid=News&w=700&h=393&c=14&qlt=90" alt="Motocross Rider jumping over a dirt track" class="motocross-img" />
+    </div>
+  </section>
+
+  <!-- YouTube Video -->
+  <section class="custom-section section-dark" id="video">
+    <div class="container">
+      <h2>Favorite Motocross Video</h2>
+      <div class="ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube.com/embed/dHtwZ07N1ic" 
+          title="Motocross video player" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tableau Graph -->
+  <section class="custom-section" id="tableau">
+    <div class="container">
+      <h2>Motocross Data Visualization</h2>
+      <div class='tableauPlaceholder' id='viz1750215078108' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Q3 ' src='https://public.tableau.com/static/images/KY/KY9H8SJ68/1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='path' value='shared/KY9H8SJ68' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/KY/KY9H8SJ68/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1750215078108');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div>
+  </section>
+
+  <!-- Link to Riddle App -->
+  <section class="custom-section section-dark">
+    <div class="container text-center">
+      <h2>Try My Riddle Generator!</h2>
+      <a href="riddles.html" class="btn btn-success">Go to Riddle Generator</a>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
